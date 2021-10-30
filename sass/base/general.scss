@@ -3,3 +3,13 @@ body {
     font-family: $font-text;
     width:100%;
 }
+
+.titre-style {
+    font-family: $font-title;
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+}
