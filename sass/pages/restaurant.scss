@@ -1,3 +1,5 @@
+@import "../utils/variables";
+
 .photo-restaurant {
     width:100%;
     z-index: 1;
@@ -9,8 +11,8 @@
     100% {
       transform: scale(1);
     }
-  }
-  
+}
+
 .restaurant {
     display: flex;
     flex-direction: column;
@@ -51,10 +53,34 @@
             padding-right: 10px;
             margin-bottom: 20px;
 
+            &__intitule {
+                flex:1;
+            }
+
             &__prix {
                 align-self: end;
+                margin-right: 20px;
             }
         }
     }
 }
 
+.restaurant__menu__plat__confirmation {
+    background-color: $third-color;
+    margin-right: -5rem;
+    width: 4rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: 500ms;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.restaurant__menu__plat__confirmation__icon {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.restaurant__menu__plat:hover .restaurant__menu__plat__confirmation {
+    margin-right: -1rem;
+  }

@@ -1,15 +1,17 @@
+@import "../utils/variables";
 
 .localisation {
     display: flex;
     justify-content: center;
     width:100%;
-    background-color: #F2F2F2;;
+    background-color: $fond-localisation;
+
+    &__logo {
+        align-self: center;
+        margin-right: 20px;
+    }
 }
 
-.localisation__logo {
-    align-self: center;
-    margin-right: 20px;
-}
 
 
 
@@ -38,15 +40,32 @@
     margin-left: 20px;
     margin-right: 20px;
 
+    &__detail {
+        display: flex;
+        background-color:$fond;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 0px 5px 10px 1px grey;
+        margin-bottom: 20px;
+
+        &__id {
+            background-color: $primary-color;
+            color:white;
+            padding : 2px;
+            border-radius: 50%;
+            margin-left: -8px;
+            margin-right: 20px;
+            padding-left:5px;
+            padding-right: 5px;
+        }
+
+        &__logo {
+            align-self: center;
+            margin-right: 20px;
+        }
+    }
+
 }
 
-.fonctionnement__detail {
-    display: flex;
-    background-color:$fond;
-    border-radius: 20px 20px 20px 20px;
-    box-shadow: 0px 5px 10px 1px grey;
-    margin-bottom: 20px;
-}
 
 
 .fonctionnement__detail:hover {
@@ -56,27 +75,11 @@
     }
 }
 
-.fonctionnement__detail__id {
-    background-color: $primary-color;
-    color:white;
-    padding : 2px;
-    border-radius: 50%;
-    margin-left: -8px;
-    margin-right: 20px;
-    padding-left:5px;
-    padding-right: 5px;
-}
-
-.fonctionnement__detail__logo {
-    align-self: center;
-    margin-right: 20px;
-}
-
 
 
 
 .bloc-restaurant {
-    background-color: #F2F2F2;
+    background-color: $fond;
     margin-top: 50px;
     padding-bottom: 30px;
     &__titre {
@@ -94,9 +97,32 @@
     width:90%;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px 1px #F2F2F2;
+    box-shadow: 0px 0px 10px 1px $fond;
     margin-left: auto;
     margin-right: auto;
+
+    &__legende {
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__detail {
+
+            &__nom {
+                margin-top: 15px;
+                margin-bottom: 6px;
+            
+            }
+
+            &__lieu {
+                margin-top: 5px;
+                margin-bottom: 20px;
+            }
+            
+        }
+    }
 }
 
 .nouveau{
@@ -116,41 +142,26 @@
     object-fit: cover;
 }
 
-.card-restaurant__legende__detail__nom {
-    margin-top: 15px;
-    margin-bottom: 6px;
 
-}
 
-.card-restaurant__legende__detail p {
-    margin-top: 5px;
-    margin-bottom: 20px;
-}
 
-.card-restaurant__legende{
-    margin-left: 10px;
-    margin-right: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* partie avec les coeurs */
 
 @keyframes zoom_heart {
     0% {transform:scale(0.1);}
     100% {transform:scale(1);}
     }
-
 .card-restaurant__legende__like {
     position:absolute;
     margin:75%;
     font-size: 2rem;
+
     &--onclick {
         opacity: 0;
         position:absolute;
     margin:75%;
     font-size: 2rem;
     }
-    
 }
     
 .card-restaurant__legende__like--onclick:hover{
@@ -163,6 +174,10 @@
 
 }
 
+
+
+/* loading spinner */
+
 @keyframes custom-loading {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -170,10 +185,9 @@
 @keyframes loader {
     100% {
       opacity: 0;
-      z-index: -10;
+      z-index: -10; /*à la fin de l'animation, la div passe tout en dessous (non visible)*/
     }
   } 
-
 
 .loading-spinner {
     display: flex;
@@ -184,30 +198,12 @@
     z-index: 3;
     background-color: rgba(255, 255, 255, 0.90);
     animation-name: loader;
-    animation-duration: 0.01s;
+    animation-duration: 1s;
     animation-delay: 3s;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards; /*garde les dernières règles css du keyframe, donc cache l'animation*/
 }
 
 .loading-spinner__animation {
-    animation-name: custom-loading; 
-    animation-duration: 3s ;
-    animation-timing-function: linear;
-    animation-iteration-count: 3;
-    animation-fill-mode: forwards;
-}
-/*
-.loading-spinner::before {
-    content: "";
-    z-index: 3;
-    position: absolute;
-    background: #0b0b0b;
-    opacity: 0.5;
-    width: 100%;
-    height:100%;
-}
-
-.loading-spinner::after {
     content : "";
     border: 10px solid grey;
     border-top: 10px solid $third-color;
@@ -218,7 +214,4 @@
     animation-duration: 1s ;
     animation-timing-function: linear;
     animation-iteration-count: 3;
-    animation-fill-mode: forwards;
 }
-
-*/
