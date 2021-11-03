@@ -1,0 +1,41 @@
+.fonctionnement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+
+    &__detail {
+        padding-right: 15px;
+        width:auto;
+    }
+}
+
+.bloc-restaurant {
+    &__titre {
+        text-align: center;
+    }
+
+    &__preview {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.card-restaurant {
+    width:30%;
+
+    &__legende {
+        &__like {
+            margin-left: 25%;
+
+            &--onclick {
+                margin-left: 25%;
+            }
+        }
+    }
+}
+
+.nouveau {
+    margin-left: 22%;
+    margin-top: 1%;
+}
