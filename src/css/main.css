@@ -155,6 +155,38 @@ a {
   padding-left: 10px;
   margin-bottom: 20px;
   opacity: 0;
+  /* Affichage des plats en décalé */
+  /* au survol : animation de l'icône "check" */
+}
+
+.restaurant__menu__plat:nth-child(2) {
+  -webkit-animation: apparition 0.3s ease-in-out forwards;
+          animation: apparition 0.3s ease-in-out forwards;
+}
+
+.restaurant__menu__plat:nth-child(3) {
+  -webkit-animation: apparition 0.3s 0.3s ease-in-out forwards;
+          animation: apparition 0.3s 0.3s ease-in-out forwards;
+}
+
+.restaurant__menu__plat:nth-child(4) {
+  -webkit-animation: apparition 0.3s 0.6s ease-in-out forwards;
+          animation: apparition 0.3s 0.6s ease-in-out forwards;
+}
+
+.restaurant__menu__plat:nth-child(5) {
+  -webkit-animation: apparition 0.3s 0.9s ease-in-out forwards;
+          animation: apparition 0.3s 0.9s ease-in-out forwards;
+}
+
+.restaurant__menu__plat:hover .restaurant__menu__plat__confirmation {
+  width: 50px;
+}
+
+.restaurant__menu__plat:hover .restaurant__menu__plat__confirmation__icon {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  opacity: 1;
 }
 
 .restaurant__menu__plat__intitule {
@@ -207,36 +239,32 @@ a {
   opacity: 0;
 }
 
-.restaurant__menu__plat:hover .restaurant__menu__plat__confirmation {
-  width: 50px;
+/*
+.restaurant__menu__plat:hover {
+    .restaurant__menu__plat__confirmation {
+        width: 50px;
+        &__icon {
+            transform: rotate(0deg);
+            opacity:1;
+        }
+    }
 }
 
-.restaurant__menu__plat:hover .restaurant__menu__plat__confirmation__icon {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  opacity: 1;
+.restaurant__menu__plat {
+    &:nth-child(2){
+        animation: apparition 0.3s ease-in-out forwards;
+    }
+    &:nth-child(3){
+        animation: apparition 0.3s 0.3s ease-in-out forwards;
+    }
+    &:nth-child(4){
+        animation: apparition 0.3s 0.6s ease-in-out forwards;
+    }
+    &:nth-child(5){
+        animation: apparition 0.3s 0.9s ease-in-out forwards;
+    }
 }
-
-.restaurant__menu__plat:nth-child(2) {
-  -webkit-animation: apparition 0.3s ease-in-out forwards;
-          animation: apparition 0.3s ease-in-out forwards;
-}
-
-.restaurant__menu__plat:nth-child(3) {
-  -webkit-animation: apparition 0.3s 0.3s ease-in-out forwards;
-          animation: apparition 0.3s 0.3s ease-in-out forwards;
-}
-
-.restaurant__menu__plat:nth-child(4) {
-  -webkit-animation: apparition 0.3s 0.6s ease-in-out forwards;
-          animation: apparition 0.3s 0.6s ease-in-out forwards;
-}
-
-.restaurant__menu__plat:nth-child(5) {
-  -webkit-animation: apparition 0.3s 0.9s ease-in-out forwards;
-          animation: apparition 0.3s 0.9s ease-in-out forwards;
-}
-
+*/
 .localisation {
   display: -webkit-box;
   display: -ms-flexbox;
