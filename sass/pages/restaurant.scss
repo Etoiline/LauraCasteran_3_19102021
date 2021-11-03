@@ -2,14 +2,15 @@
 
 .photo-restaurant {
     width:100%;
+    height:250px;
     z-index: 1;
 }
 @keyframes apparition {
     0% {
-      transform: scale(0)
+      opacity :0;
     }
     100% {
-      transform: scale(1);
+      opacity: 1;
     }
 }
 
@@ -32,7 +33,7 @@
     }
 
     &__menu {
-        animation: apparition .8s;
+        
         margin-top: 10px;
         margin-bottom: 40px;
 
@@ -50,37 +51,68 @@
             margin-right: auto;
             justify-content: space-between;
             padding-left: 10px;
-            padding-right: 10px;
             margin-bottom: 20px;
+            opacity:0;
 
             &__intitule {
                 flex:1;
+                white-space: nowrap;
+                width:250px;
+                
+                & > * {
+                    text-overflow: ellipsis;
+                    overflow:hidden;
+                }
             }
 
             &__prix {
                 align-self: end;
                 margin-right: 20px;
+                font-weight: bolder;
+            }
+
+            &__confirmation {
+                background-color: $third-color;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                border-radius: 0px 20px 20px 0px;
+                width:0px;
+                transition: all 0.5s ease-in-out;
+
+                &__icon {
+                    font-size: 1.5rem;
+                    color: white;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    transform: rotate(90deg);
+                    transition: all 0.5s ease-in-out;
+                    opacity:0;
+                }
             }
         }
     }
 }
 
-.restaurant__menu__plat__confirmation {
-    background-color: $third-color;
-    margin-right: -5rem;
-    width: 4rem;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition: 500ms;
-    border-radius: 0px 20px 20px 0px;
+.restaurant__menu__plat:hover {
+    .restaurant__menu__plat__confirmation {
+        width: 50px;
+        &__icon {
+            transform: rotate(0deg);
+            opacity:1;
+        }
+    }
 }
 
-.restaurant__menu__plat__confirmation__icon {
-    font-size: 1.5rem;
-    color: white;
+.restaurant__menu__plat:nth-child(2){
+    animation: apparition 0.3s ease-in-out forwards;
 }
-
-.restaurant__menu__plat:hover .restaurant__menu__plat__confirmation {
-    margin-right: -1rem;
-  }
+.restaurant__menu__plat:nth-child(3){
+    animation: apparition 0.3s 0.3s ease-in-out forwards;
+}
+.restaurant__menu__plat:nth-child(4){
+    animation: apparition 0.3s 0.6s ease-in-out forwards;
+}
+.restaurant__menu__plat:nth-child(5){
+    animation: apparition 0.3s 0.9s ease-in-out forwards;
+}

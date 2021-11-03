@@ -29,11 +29,12 @@
     padding: 15px;
     border : none;
     align-self: center;
+
+    &:hover {
+        transform: scale(1.15);
+    }
 }
 
-.boutton-defaut:hover {
-    transform: scale(1.15);
-}
 
 
 .fonctionnement {
@@ -46,6 +47,13 @@
         border-radius: 20px 20px 20px 20px;
         box-shadow: 0px 5px 10px 1px grey;
         margin-bottom: 20px;
+
+        &:hover {
+            background-color: lighten($primary-color, 30%);
+            .fonctionnement__detail__logo {
+                color: $primary-color;
+            }
+        }
 
         &__id {
             background-color: $primary-color;
@@ -62,16 +70,6 @@
             align-self: center;
             margin-right: 20px;
         }
-    }
-
-}
-
-
-
-.fonctionnement__detail:hover {
-    background-color: lighten($primary-color, 30%);
-    .fonctionnement__detail__logo {
-        color: $primary-color;
     }
 }
 
@@ -145,7 +143,7 @@
 
 
 
-/* partie avec les coeurs */
+/* Remplissage des coeurs */
 
 @keyframes zoom_heart {
     0% {transform:scale(0.1);}
@@ -159,19 +157,18 @@
     &--onclick {
         opacity: 0;
         position:absolute;
-    margin:75%;
-    font-size: 2rem;
-    }
-}
-    
-.card-restaurant__legende__like--onclick:hover{
-    opacity:1;
-    background: linear-gradient(to bottom left, $primary-color,$secondary-color);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation-name: zoom_heart;
-    animation-duration: 1.2s;
+        margin:75%;
+        font-size: 2rem;
 
+        &:hover {
+            opacity:1;
+            background: linear-gradient(to bottom left, $primary-color,$secondary-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation-name: zoom_heart;
+            animation-duration: 1.2s;
+        }
+    }
 }
 
 
@@ -187,7 +184,7 @@
       opacity: 0;
       z-index: -10; /*à la fin de l'animation, la div passe tout en dessous (non visible)*/
     }
-  } 
+} 
 
 .loading-spinner {
     display: flex;
@@ -199,19 +196,20 @@
     background-color: rgba(255, 255, 255, 0.90);
     animation-name: loader;
     animation-duration: 1s;
-    animation-delay: 3s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards; /*garde les dernières règles css du keyframe, donc cache l'animation*/
-}
 
-.loading-spinner__animation {
-    content : "";
-    border: 10px solid grey;
-    border-top: 10px solid $third-color;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation-name: custom-loading; 
-    animation-duration: 1s ;
-    animation-timing-function: linear;
-    animation-iteration-count: 3;
+    &__animation {
+        content : "";
+        border: 10px solid grey;
+        border-top: 10px solid $third-color;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        animation-name: custom-loading; 
+        animation-duration: 0.5s ;
+        animation-timing-function: linear;
+        animation-iteration-count: 3;
+    }
 }
