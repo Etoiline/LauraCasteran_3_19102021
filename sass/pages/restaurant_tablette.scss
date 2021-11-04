@@ -1,0 +1,27 @@
+.restaurant {
+    margin-top: auto;
+    z-index:0;
+    border-radius: unset;
+
+    &__header {
+        justify-content: left;
+        margin-bottom: 3%;
+
+        &__nom {
+            margin-right: 30px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__titre {
+            width: 100%;
+        }
+
+        &__plat {
+            width: auto;
+        }
+    }
+}
