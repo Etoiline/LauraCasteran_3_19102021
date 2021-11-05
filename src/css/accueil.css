@@ -64,10 +64,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .fonctionnement__detail:hover {
-  cursor: pointer;
   background-color: #e4d5f6;
 }
 
@@ -213,10 +213,10 @@
   position: absolute;
   margin: 75%;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .card-restaurant__legende__like--onclick:hover {
-  cursor: pointer;
   opacity: 1;
   background: -webkit-gradient(linear, right top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to bottom left, #9356DC, #FF79DA);

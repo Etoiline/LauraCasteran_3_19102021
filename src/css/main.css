@@ -157,6 +157,7 @@ a {
   padding-left: 10px;
   margin-bottom: 20px;
   opacity: 0;
+  cursor: pointer;
   /* Affichage des plats en décalé */
   /* au survol : animation de l'icône "check" */
 }
@@ -179,10 +180,6 @@ a {
 .restaurant__menu__plat:nth-child(5) {
   -webkit-animation: apparition 0.3s 0.9s ease-in-out forwards;
           animation: apparition 0.3s 0.9s ease-in-out forwards;
-}
-
-.restaurant__menu__plat:hover {
-  cursor: pointer;
 }
 
 .restaurant__menu__plat:hover .restaurant__menu__plat__confirmation {
@@ -310,10 +307,10 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .fonctionnement__detail:hover {
-  cursor: pointer;
   background-color: #e4d5f6;
 }
 
@@ -459,10 +456,10 @@ a {
   position: absolute;
   margin: 75%;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .card-restaurant__legende__like--onclick:hover {
-  cursor: pointer;
   opacity: 1;
   background: -webkit-gradient(linear, right top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to bottom left, #9356DC, #FF79DA);

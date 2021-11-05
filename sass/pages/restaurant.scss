@@ -55,6 +55,7 @@
             padding-left: 10px;
             margin-bottom: 20px;
             opacity:0;
+            cursor: pointer;
 
             /* Affichage des plats en décalé */
             &:nth-child(2){
@@ -72,7 +73,6 @@
 
             /* au survol : animation de l'icône "check" */
             &:hover {
-                cursor: pointer;
                 .restaurant__menu__plat__confirmation {
                     width: 50px;
                     &__icon {
