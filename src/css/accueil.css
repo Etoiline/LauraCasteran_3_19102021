@@ -25,6 +25,10 @@
   text-align: center;
 }
 
+.introduction__titre {
+  font-weight: bolder;
+}
+
 .boutton-defaut {
   border-radius: 25px 25px 25px 25px;
   background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
@@ -56,6 +60,9 @@
   -webkit-box-shadow: 0px 5px 10px 1px grey;
           box-shadow: 0px 5px 10px 1px grey;
   margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .fonctionnement__detail:hover {
@@ -75,6 +82,11 @@
   margin-right: 20px;
   padding-left: 5px;
   padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
 }
 
 .fonctionnement__detail__logo {
