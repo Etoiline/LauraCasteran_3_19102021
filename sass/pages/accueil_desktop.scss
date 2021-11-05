@@ -4,9 +4,12 @@
     justify-content: space-around;
     margin-top: 30px;
 
+    &__titre {
+        width:250px;
+    }
+
     &__detail {
-        padding-right: 15px;
-        width:auto;
+        width:250px;
     }
 }
 

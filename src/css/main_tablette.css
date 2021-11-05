@@ -50,6 +50,14 @@
   margin-top: 1%;
 }
 
+.fonctionnement__titre {
+  width: 250px;
+}
+
+.fonctionnement__detail {
+  width: 250px;
+}
+
 .restaurant {
   margin-top: auto;
   z-index: 0;

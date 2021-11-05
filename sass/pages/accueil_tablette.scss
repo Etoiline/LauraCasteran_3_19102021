@@ -46,3 +46,12 @@
     margin-left: 25%;
     margin-top: 1%;
 }
+
+.fonctionnement {
+    &__titre {
+        width:250px;
+    }
+    &__detail {
+        width:250px;
+    }
+}

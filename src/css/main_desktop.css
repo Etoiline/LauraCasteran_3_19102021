@@ -9,9 +9,12 @@
   margin-top: 30px;
 }
 
+.fonctionnement__titre {
+  width: 250px;
+}
+
 .fonctionnement__detail {
-  padding-right: 15px;
-  width: auto;
+  width: 250px;
 }
 
 .bloc-restaurant__titre {
