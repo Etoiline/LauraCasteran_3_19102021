@@ -108,6 +108,13 @@
     box-shadow: 0px 0px 10px 1px $fond;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
+
+    & figure {
+        margin:0;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     &__legende {
         margin-left: 10px;
