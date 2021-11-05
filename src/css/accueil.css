@@ -42,6 +42,7 @@
 }
 
 .boutton-defaut:hover {
+  cursor: pointer;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
@@ -66,6 +67,7 @@
 }
 
 .fonctionnement__detail:hover {
+  cursor: pointer;
   background-color: #e4d5f6;
 }
 
@@ -214,6 +216,7 @@
 }
 
 .card-restaurant__legende__like--onclick:hover {
+  cursor: pointer;
   opacity: 1;
   background: -webkit-gradient(linear, right top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to bottom left, #9356DC, #FF79DA);
