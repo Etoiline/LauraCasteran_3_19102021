@@ -1,0 +1,29 @@
+
+/*loading spinner*/
+@keyframes custom-loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes loader {
+    100% {
+      opacity: 0;
+      z-index: -10; /*à la fin de l'animation, la div passe tout en dessous (non visible)*/
+    }
+} 
+
+
+/*remplissage du coeur*/
+@keyframes zoom_heart {
+    0% {transform:scale(0.1);}
+    100% {transform:scale(1);}
+}
+
+/*délai apparition des plats*/
+@keyframes apparition {
+    0% {
+      opacity :0;
+    }
+    100% {
+      opacity: 1;
+    }
+}

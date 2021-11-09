@@ -3,27 +3,25 @@
     background-color: $fond-footer;
     margin-top: 0px;
     padding-bottom: 20px;
-    
-}
 
-.footer img {
-    width:30%;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    filter:brightness(100);
-}
-
-.footer-menu {
-    display: flex;
-    flex-direction: column;
-    &__element {
-        color : white;
+    img {
+        width:30%;
         margin-left: 20px;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        filter:brightness(100);
+
     }
+
+    &-menu {
+        display: flex;
+        flex-direction: column;
+        &__element {
+            color : white;
+            margin-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
 }
-
-
-

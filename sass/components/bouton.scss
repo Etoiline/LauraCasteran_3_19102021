@@ -1,0 +1,13 @@
+.boutton-defaut {
+    border-radius: 25px 25px 25px 25px;
+    background: linear-gradient(to top left, $primary-color,$secondary-color);
+    color: white;
+    padding: 15px;
+    border : none;
+    align-self: center;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.15);
+    }
+}
