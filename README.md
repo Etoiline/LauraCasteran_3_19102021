@@ -2,8 +2,6 @@
 Dynamisez une page web avec des animations CSS
 
 
-![maquette web reservia](./overview.png)
-
 ## Éléments fournis par l'entreprise virtuelle.
 - Les maquettes pour les résolutions desktop et mobile
 - Les images
